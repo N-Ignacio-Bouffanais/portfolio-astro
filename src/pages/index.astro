@@ -1,14 +1,180 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Nicolas Bouffanais">
-	<main>
-		
-	</main>
+  <main>
+    <div class="container">
+      <section id="primera_section" class="about">
+        <div class="about-title">
+          <h1>Hi, I'm Nicolás Bouffanais</h1>
+        </div>
+        <div class="about-main">
+          <div class="about-info">
+            <h2>I'm Full stack developer</h2>
+            <p>
+              I had the opportunity to work as a junior in a software
+              development company for 4 months. I have been doing Frontend
+              projects with Reactjs, Vuejs, reactnative and TypeScript.
+			  Also I've been working recently with Express, TypeScript on Rest APIs with swagguer documentation.
+            </p>
+            <p>Here are a few technologies I’ve been working with recently:</p>
+            <ul class="lista-habilidades">
+              <li>JavaScript (ES6+)</li>
+			  <li>TypeScript</li>
+              <li>Vue JS</li>
+              <li>React JS</li>
+              <li>Node js</li>
+			  <li>Express</li>
+              <li>Nextjs</li>
+			  <li>MongoDB</li>
+			  <li>Astro</li>
+			  <li>HTML5</li>
+              <li>CSS-responsive</li>
+              <li>SASS</li>
+            </ul>
+          </div>
+          <div class="about-contact">
+            <div class="contact-container">
+              <div class="aedin card">
+                <a
+                  target="_blank"
+                  class="icon-linkedin"
+                  href="https://www.linkedin.com/in/nicolas-ignacio-bouffanais-lay-941989236/"
+                  title="Nicolas' aedin"
+                  rel="noreferrer"
+                >
+                  <Icon name="mdi:linkedin" width="4rem" />
+                </a>
+              </div>
+              <div class="github card">
+                <a
+                  target="_blank"
+                  href="https://github.com/N-Ignacio-Bouffanais"
+                  title="Nicolas' Github"
+                  rel="noreferrer"
+                >
+                  <Icon name="mdi:github" width="4rem" />
+                </a>
+              </div>
+              <div class="instagram card">
+                <a
+                  target="_blank"
+                  href="https://www.frontendmentor.io/profile/N-Ignacio-Bouffanais"
+                  title="Frontendmentor-profile"
+                  rel="noreferrer"
+                >
+                  <Icon name="mdi:instagram" width="4rem" />
+                </a>
+              </div>
+              <div class="twitter card">
+                <a
+                  target="_blank"
+                  class="icon-twitter"
+                  href="https://twitter.com/N_Bouffanais"
+                  title="Nicolas' Twitter"
+                  rel="noreferrer"
+                >
+                  <Icon name="mdi:twitter" width="4rem" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
 </Layout>
 
-<style>
-
+<style lang="scss">
+  main .about {
+    padding: 3rem 0 0;
+    width: 85vw;
+    margin: 0 auto;
+    min-height: 60rem;
+    .about-title h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      margin: 2.5rem 0;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-image: linear-gradient(to right, aqua, #00ce90);
+    }
+    .about-main {
+      display: flex;
+      flex-wrap: wrap;
+      color: white;
+      justify-content: center;
+      gap: 2rem;
+      .about-info {
+		h2{
+			font-size: 3rem;
+		}
+        flex-basis: 40rem;
+        flex-grow: 9;
+        p {
+          margin: 1rem 0;
+          font-size: 1.8rem;
+          line-height: 2.8rem;
+        }
+      }
+      .about-contact {
+        padding: 2rem 0;
+        flex-basis: 35rem;
+        flex-grow: 1;
+        max-height: 30rem;
+        .contact-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+          grid-auto-rows: 12rem;
+          gap: 2rem;
+          .card {
+            border-radius: 0.8rem;
+            border-style: solid;
+            border-color: #171717;
+            padding: 2rem;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            &:hover {
+              transform: translateX(0) scale(1.03);
+            }
+            svg {
+              width: 6rem;
+			  color: white;
+            }
+          }
+          .linkedin {
+            background-color: #0072b1;
+          }
+          .twitter {
+            background-color: #00acee;
+          }
+          .github {
+            background-color: #000;
+          }
+          .instagram {
+            background-color: #f51e73;
+          }
+        }
+      }
+      .lista-habilidades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1.5rem 3rem;
+        list-style: none;
+        li {
+          font-size: 1.8rem;
+          color: white;
+          line-height: 2.4rem;
+          &::before {
+            content: "-> ";
+            color: rgb(3, 224, 224);
+          }
+        }
+      }
+    }
+  }
 </style>
