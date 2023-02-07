@@ -6,7 +6,7 @@ import { Icon } from "astro-icon";
 <Layout title="Nicolas Bouffanais">
   <main>
     <div class="container">
-      <section id="primera_section" class="about">
+      <section id="about" class="about">
         <div class="about-title">
           <h1>Hi, I'm Nicolás Bouffanais</h1>
         </div>
@@ -16,33 +16,34 @@ import { Icon } from "astro-icon";
             <p>
               I had the opportunity to work as a junior in a software
               development company for 4 months. I have been doing Frontend
-              projects with Reactjs, Vuejs, reactnative and TypeScript.
-			  Also I've been working recently with Express, TypeScript on Rest APIs with swagguer documentation.
+              projects with Reactjs, Vuejs, reactnative and TypeScript. Also
+              I've been working recently with Express, TypeScript on Rest APIs
+              with swagguer documentation.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul class="lista-habilidades">
               <li>JavaScript (ES6+)</li>
-			  <li>TypeScript</li>
+              <li>TypeScript</li>
               <li>Vue JS</li>
               <li>React JS</li>
               <li>Node js</li>
-			  <li>Express</li>
+              <li>Express</li>
               <li>Nextjs</li>
-			  <li>MongoDB</li>
-			  <li>Astro</li>
-			  <li>HTML5</li>
+              <li>MongoDB</li>
+              <li>Astro</li>
+              <li>HTML5</li>
               <li>CSS-responsive</li>
               <li>SASS</li>
             </ul>
           </div>
           <div class="about-contact">
             <div class="contact-container">
-              <div class="aedin card">
+              <div class="linkedin card">
                 <a
                   target="_blank"
                   class="icon-linkedin"
                   href="https://www.linkedin.com/in/nicolas-ignacio-bouffanais-lay-941989236/"
-                  title="Nicolas' aedin"
+                  title="Nicolas' linkedin"
                   rel="noreferrer"
                 >
                   <Icon name="mdi:linkedin" width="4rem" />
@@ -83,6 +84,252 @@ import { Icon } from "astro-icon";
           </div>
         </div>
       </section>
+      <section class="projects" id="projects">
+        <h2>Some things i've done</h2>
+        <div class="projects-main">
+          <a
+            title="Trivia Game"
+            target="_blank"
+            href="https://trivia-vue-ts.vercel.app/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/trivia.JPG"
+                  alt="Trivia game image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Trivia Game</h3>
+                <p>
+                  This is a trivia game with five categoriesa and ranking.This
+                  project has authentication with firebase and was biuld with
+                  vue3 and Typescript.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:vue" width="2rem" />
+                <Icon name="logos:sass" width="2rem" />
+                <Icon name="logos:typescript-icon" width="2rem" />
+                <Icon name="logos:firebase" width="2rem" />
+                <p class="detail-date">13-12-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="Repository project"
+            target="_blank"
+            href="https://github.com/N-Ignacio-Bouffanais/api-rest-ts-express"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/rest-express-ts.JPG"
+                  alt="Trivia game image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Rest Api Express-TS</h3>
+                <p>
+                  A Backend build with Express, Typescript and authentication using JWT and Bcrypt.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:nodejs-icon" width="2rem" />
+                <Icon name="logos:typescript-icon" width="2rem" />
+                <Icon name="vscode-icons:file-type-mongo" width="3rem"/>
+                <p class="detail-date">13-01-2023</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="Tips for developers"
+            target="_blank"
+            href="https://n-ignacio-bouffanais.github.io/Blog-tips-for-developers/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                src="/blog.JPG"
+                alt="Project image"
+                width={350}
+                height={150}
+              />
+              </figure>
+              <div class="card-body">
+                <h3>Blog Frontend developer</h3>
+                <p>
+                  Guides and tips to start with JavaScript,CSS responsive, HTML5
+                  and deployed on github pages.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:sass" width="2rem" />
+                <p class="detail-date">06-10-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="Dashboard with theme switcher"
+            target="_blank"
+            href="https://n-ignacio-bouffanais.github.io/Social-media-dashboard/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/theme-switcher.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Dashboard theme switcher</h3>
+                <p>
+                  This is a Social media dashboard with theme switcher build
+                  with HTML, CSS GRID, CSS Flexbox y Javascript.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:javascript" width="2rem" />
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:sass" width="2rem" />
+                <p class="detail-date">24-10-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="time-slots-app"
+            target="_blank"
+            href="https://time-slots-app.vercel.app/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/time-slot.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Time-slots-app</h3>
+                <p>
+                  This project is about an app where the users can take a time
+                  slot and a counter that show how many motorcylces are
+                  available. This project was built with nextjs13.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:react" width="2rem" />
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:css-3" width="2rem" />
+                <p class="detail-date">28-11-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="easybank-landing-page"
+            target="_blank"
+            href="https://easybank-landing-page-omega-blue.vercel.app/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/easybank-page.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Bank-Landing-page</h3>
+                <p>
+                  This is a solution to the easybank-landing-page challenge on
+                  Frontend Mentor.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:javascript" width="2rem" />
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:css-3" width="2rem" />
+                <p class="detail-date">11-11-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="Interactive rating component"
+            target="_blank"
+            href="https://n-ignacio-bouffanais.github.io/interactive-rating-component-main/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/rating-component.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Interactive rating component</h3>
+                <p>
+                  This is a solution to the interactive-rating-component-main
+                  app challenge on Frontend Mentor.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:javascript" width="2rem" />
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:css-3" width="2rem" />
+                <p class="detail-date">17-10-2022</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="advice-generator"
+            target="_blank"
+            href="https://n-ignacio-bouffanais.github.io/advice-generator-app/src/"
+            rel="noreferrer"
+          >
+            <div class="card-container">
+              <figure class="project-image-container">
+                <img
+                  src="/advice-generator.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
+              </figure>
+              <div class="card-body">
+                <h3>Advice generator</h3>
+                <p>
+                  This is a solution to the Advice generator app challenge on
+                  Frontend Mentor.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:javascript" width="2rem" />
+                <Icon name="logos:html-5" width="2rem" />
+                <Icon name="logos:css-3" width="2rem" />
+                <p class="detail-date">25-10-2022</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 </Layout>
@@ -97,10 +344,7 @@ import { Icon } from "astro-icon";
       font-size: 5rem;
       font-weight: 800;
       margin: 2.5rem 0;
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-      background-image: linear-gradient(to right, aqua, #00ce90);
+      color: #00acee;
     }
     .about-main {
       display: flex;
@@ -109,9 +353,10 @@ import { Icon } from "astro-icon";
       justify-content: center;
       gap: 2rem;
       .about-info {
-		h2{
-			font-size: 3rem;
-		}
+        h2 {
+          font-size: 3rem;
+          color: #f51e73;
+        }
         flex-basis: 40rem;
         flex-grow: 9;
         p {
@@ -143,7 +388,7 @@ import { Icon } from "astro-icon";
             }
             svg {
               width: 6rem;
-			  color: white;
+              color: white;
             }
           }
           .linkedin {
@@ -174,6 +419,98 @@ import { Icon } from "astro-icon";
             color: rgb(3, 224, 224);
           }
         }
+      }
+    }
+  }
+  /*Section projects*/
+  .projects {
+    padding: 0 0 6rem;
+    margin: 0 auto;
+    background: #0e0e0e;
+    a{
+      text-decoration: none;
+    }
+    h2 {
+      font-size: 3.4rem;
+      font-weight: 700;
+      margin: 2rem auto;
+      color: #f51e73;
+      width: 85vw;
+    }
+    .projects-main {
+      display: grid;
+      width: 85vw;
+      gap: 3rem;
+      grid-auto-rows: 35rem;
+      grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+      margin: 1rem auto;
+    }
+  }
+
+  .card-container {
+    background: #171717;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &:hover {
+      transform: translateX(0) scale(1.03);
+    }
+    img {
+      border-radius: 0.6rem 0.6rem 0 0;
+      background-size: contain;
+      width: 100%;
+      min-height: 15rem;
+      height: auto;
+    }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #00ce90;
+    }
+    a {
+      padding: 1rem 0;
+      color: #f2f2f2;
+      text-transform: uppercase;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .card-body {
+      padding: 0.5rem 0.7rem;
+      h3 {
+        display: flex;
+        justify-content: start;
+        margin: 0 0 0.5rem 0;
+        font-size: 1.5rem;
+      }
+      p {
+        color: rgb(124 132 149);
+        font-size: 1.4rem;
+      }
+    }
+    .detail {
+      background-color: #27272a;
+      padding: 0.25rem 0.8rem;
+      border-radius: 0 0 0.6rem 0.6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 4rem;
+      p{
+        color: yellow;
+      }
+      .detail-date {
+        font-size: 1.2rem;
+        padding: 0.2rem 0.5rem;
+        background-color: #3f3f46;
+        border-radius: 0.3rem;
+      }
+      .detail svg {
+        font-size: 2.5rem;
+        margin: 0 0.5rem;
       }
     }
   }

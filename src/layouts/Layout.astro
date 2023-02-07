@@ -11,12 +11,21 @@ const { title } = Astro.props;
   let state_menu: boolean = false;
   const x = document.getElementById("menu")!;
   const btn = document.getElementById("btn")!;
+  const about = document.getElementById("about")!;
+  const p = document.getElementById("p")!;
   btn.addEventListener("click", () => {
     state_menu = !state_menu;
-    console.log(state_menu);
     state_menu
       ? x.classList.replace("hide", "show")
       : x.classList.replace("show", "hide");
+  });
+  about.addEventListener("click", () => {
+    x.classList.replace("show", "hide");
+    state_menu = !state_menu;
+  });
+  p.addEventListener("click", () => {
+    x.classList.replace("show", "hide");
+    state_menu = !state_menu;
   });
 </script>
 
@@ -37,18 +46,20 @@ const { title } = Astro.props;
               ><Icon name="ic:baseline-dehaze" height="4rem" /></button
             >
             <ul class="hide" id="menu">
-              <li><a href="">About me</a></li>
-              <li><a href="">Projects</a></li>
-              <li><a href="">Resume</a></li>
+              <li><a href="#about" id="about">About me</a></li>
+              <li><a href="#projects" id="p">Projects</a></li>
+              <li><a href="/Nicolas_Bouffanais_CV.pdf" target="_blank"
+              title="Curriculum PDF" rel="noreferrer">Resume</a></li>
             </ul>
           </div>
         </div>
         <div class="right">
           <ol>
-            <li><a href="">About me</a></li>
-            <li><a href="">Projects</a></li>
+            <li><a href="#about" id="about">About me</a></li>
+            <li><a href="#projects" id="p">Projects</a></li>
           </ol>
-          <a class="resume" href="">Resume</a>
+          <a class="resume" href="/Nicolas_Bouffanais_CV.pdf" target="_blank"
+              title="Curriculum PDF" rel="noreferrer">Resume</a>
         </div>
       </nav>
     </header>
@@ -148,10 +159,11 @@ const { title } = Astro.props;
     .navigation {
       height: $nav-height;
       a {
-        color: aqua;
+        color: springgreen;
         text-decoration: none;
         margin: 0 1vw;
         font-size: 2.2rem;
+        font-weight: 600;
       }
       ol {
         list-style: none;
@@ -188,7 +200,7 @@ const { title } = Astro.props;
         }
         .resume {
           border-radius: 0.4rem;
-          border: 0.1rem solid #03e0e0;
+          border: 0.1rem solid springgreen;
           padding: 0.5rem 1rem;
         }
       }
@@ -218,6 +230,7 @@ const { title } = Astro.props;
         p {
           font-size: 2rem;
           color: white;
+          text-align: center;
         }
         svg{
           width: 4rem;
