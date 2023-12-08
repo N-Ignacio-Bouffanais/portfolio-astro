@@ -35,7 +35,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content="this website is the Nicolas Bouffanais portfolio" />
     <meta name="theme-color" content="#18181a">
-  </head><a rel="icon" type="image/svg+xml" href="/favicon.svg"></a>
+  </head><a aria-label="favicon" rel="icon" type="image/svg+xml" href="/favicon.svg"></a>
   <meta name="generator" content={Astro.generator} />
   <title>{title}</title>
 
@@ -44,21 +44,21 @@ const { title } = Astro.props;
       <nav class="navigation">
         <div class="left">
           <div class="menu">
-            <button class="checkbtn" id="btn"
+            <button class="checkbtn" id="btn" aria-label="side-menu"
               ><Icon name="ic:baseline-dehaze" height="4rem" /></button
             >
             <ul class="hide" id="menu">
-              <li><a href="#about" id="about">About me</a></li>
-              <li><a href="#projects" id="p">Projects</a></li>
+              <li><a href="#about" id="about-nav" aria-label="about me">About me</a></li>
+              <li><a href="#projects" id="project-nav" aria-label="projects">Projects</a></li>
               <li><a href="/Nicolas_Bouffanais_CV.pdf" target="_blank"
-              title="Curriculum PDF" rel="noreferrer">Resume</a></li>
+              title="Curriculum PDF" rel="noreferrer" aria-label="my resume">Resume</a></li>
             </ul>
           </div>
         </div>
         <div class="right">
           <ol>
-            <li><a href="#about" id="about">About me</a></li>
-            <li><a href="#projects" id="p">Projects</a></li>
+            <li><a href="#about" id="about-nav" aria-label="about me">About me</a></li>
+             <li><a href="#projects" id="project-nav" aria-label="projects">Projects</a></li>
           </ol>
           <a class="resume" href="/Nicolas_Bouffanais_CV.pdf" target="_blank"
               title="Curriculum PDF" rel="noreferrer">Resume</a>
@@ -71,6 +71,7 @@ const { title } = Astro.props;
         <ul>
           <li>
             <a
+            aria-label="my github profile"
               class="icons-footer"
               href="https://github.com/N-Ignacio-Bouffanais"
               target="_blank"
@@ -83,6 +84,7 @@ const { title } = Astro.props;
           <li>
             <a
               class="icons-footer"
+              aria-label="my twitter profile"
               href="https://twitter.com/N_Bouffanais"
               target="_blank"
               title="See Twitter profile"
@@ -94,6 +96,7 @@ const { title } = Astro.props;
           <li>
             <a
               class="icons-footer"
+              aria-label="my instagram profile"
               href="https://www.instagram.com/n_bouffanais/"
               target="_blank"
               title="See Instagram profile"
@@ -105,6 +108,7 @@ const { title } = Astro.props;
           <li>
             <a
               class="icons-footer"
+              aria-label="my linkedin profile"
               href="https://www.linkedin.com/in/nicolas-ignacio-bouffanais-lay-941989236/"
               target="_blank"
               title="See linkedin profile"

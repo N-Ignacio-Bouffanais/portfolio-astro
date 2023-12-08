@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 import home from "../images/home.png";
 import ecommerce from "../images/ecommerce.png";
 ---
@@ -17,33 +17,32 @@ import ecommerce from "../images/ecommerce.png";
           <div class="about-info">
             <h2>I'm Full stack developer</h2>
             <p>
-              I had the opportunity to work as a junior in a software
-              development company for 4 months. I have been doing Frontend
-              projects with Reactjs, Vuejs, reactnative and TypeScript. Also
-              I've been working recently with Express, TypeScript on Rest APIs
-              with swagguer documentation.
+              I have about 1 year of experience working with reactJS,
+              typescript, express, nestjs. The databases I have used are
+              MongoDB, Mysql and PostgresSQl
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <ul class="lista-habilidades">
-              <li>JavaScript (ES6+)</li>
+              <li>JavaScript</li>
               <li>TypeScript</li>
-              <li>Vue JS</li>
-              <li>React JS</li>
-              <li>Node js</li>
-              <li>Express</li>
-              <li>Nextjs</li>
-              <li>MongoDB</li>
+              <li>React</li>
               <li>Astro</li>
-              <li>HTML5</li>
-              <li>CSS-responsive</li>
-              <li>SASS</li>
+              <li>Vue</li>
+              <li>NodeJS</li>
+              <li>NestJS</li>
+              <li>Express</li>
+              <li>Docker</li>
+              <li>PostgreSQL</li>
+              <li>MongoDB</li>
+              <li>Prisma ORM</li>
             </ul>
           </div>
-          <div class="about-contact" >
+          <div class="about-contact">
             <div class="contact-container">
               <div class="linkedin card">
                 <a
                   target="_blank"
+                  aria-label="my linkedin profile"
                   class="icon-linkedin"
                   href="https://www.linkedin.com/in/nicolas-ignacio-bouffanais-lay-941989236/"
                   title="Nicolas' linkedin"
@@ -55,6 +54,7 @@ import ecommerce from "../images/ecommerce.png";
               <div class="github card">
                 <a
                   target="_blank"
+                  aria-label="my github profile"
                   href="https://github.com/N-Ignacio-Bouffanais"
                   title="Nicolas' Github"
                   rel="noreferrer"
@@ -62,25 +62,27 @@ import ecommerce from "../images/ecommerce.png";
                   <Icon name="mdi:github" width="4rem" />
                 </a>
               </div>
-              <div class="instagram card">
-                <a
-                  target="_blank"
-                  href="https://www.frontendmentor.io/profile/N-Ignacio-Bouffanais"
-                  title="Frontendmentor-profile"
-                  rel="noreferrer"
-                >
-                  <Icon name="mdi:instagram" width="4rem" />
-                </a>
-              </div>
               <div class="twitter card">
                 <a
                   target="_blank"
+                  aria-label="my twitter profile"
                   class="icon-twitter"
                   href="https://twitter.com/N_Bouffanais"
                   title="Nicolas' Twitter"
                   rel="noreferrer"
                 >
                   <Icon name="mdi:twitter" width="4rem" />
+                </a>
+              </div>
+              <div class="instagram card">
+                <a
+                  target="_blank"
+                  aria-label="my instagram profile"
+                  href="https://www.instagram.com/n_bouffanais/"
+                  title="Instagram profile"
+                  rel="noreferrer"
+                >
+                  <Icon name="mdi:instagram" width="4rem" />
                 </a>
               </div>
             </div>
@@ -92,22 +94,29 @@ import ecommerce from "../images/ecommerce.png";
         <div class="projects-main">
           <a
             title="Educational WebApp"
+            aria-label="link to project Educational web app"
             target="_blank"
             href="https://github.com/N-Ignacio-Bouffanais/Rooms-NestJS"
             rel="noreferrer"
           >
-          <div class="card-container">
+            <div class="card-container">
               <picture class="project-image-container">
-                <Image src={home} alt="Educational App image" width="350" height="150"/>
+                <Image
+                  src={home}
+                  alt="Educational App image"
+                  width="350"
+                  height="150"
+                />
               </picture>
               <div class="card-body">
                 <h3>Rooms App</h3>
                 <p>
-                  Educational web app, responsive, build with NestJS, ReactJS and Prisma.
+                  Educational web app, responsive, build with NestJS, ReactJS
+                  and Prisma.
                 </p>
               </div>
               <div class="detail">
-                <Icon name="logos:prisma" width="2rem"/>
+                <Icon name="logos:prisma" width="2rem" />
                 <Icon name="logos:tailwindcss-icon" width="2rem" />
                 <Icon name="logos:typescript-icon" width="2rem" />
                 <Icon name="logos:react" width="2rem" />
@@ -117,19 +126,23 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="Ecommerce"
+            aria-label="link to project Ecommerce WebApp"
             target="_blank"
             href="https://github.com/N-Ignacio-Bouffanais/astro-ecommerce"
             rel="noreferrer"
           >
-          <div class="card-container">
+            <div class="card-container">
               <picture class="project-image-container">
-                <Image src={ecommerce} alt="Educational App image" width="350" height="150"/>
+                <Image
+                  src={ecommerce}
+                  alt="Educational App image"
+                  width="350"
+                  height="150"
+                />
               </picture>
               <div class="card-body">
                 <h3>Ecommerce</h3>
-                <p>
-                  Ecommerce WebApp build with NestJS, ReactJS, PostgreSQL.
-                </p>
+                <p>Ecommerce WebApp build with NestJS, ReactJS, PostgreSQL.</p>
               </div>
               <div class="detail">
                 <Icon name="logos:tailwindcss-icon" width="2rem" />
@@ -139,10 +152,12 @@ import ecommerce from "../images/ecommerce.png";
               </div>
             </div>
           </a>
-          <a title="Trivia App"
+          <a
+            title="Trivia App"
             target="_blank"
             href="https://trivia-vue-ts.vercel.app/"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             <div class="card-container">
               <figure class="project-image-container">
                 <img
@@ -171,6 +186,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="Repository project"
+            aria-label="link to project Backend build with Express"
             target="_blank"
             href="https://github.com/N-Ignacio-Bouffanais/api-rest-ts-express"
             rel="noreferrer"
@@ -187,19 +203,21 @@ import ecommerce from "../images/ecommerce.png";
               <div class="card-body">
                 <h3>Rest Api Express-TS</h3>
                 <p>
-                  A Backend build with Express, Typescript and authentication using JWT and Bcrypt.
+                  A Backend build with Express, Typescript and authentication
+                  using JWT and Bcrypt.
                 </p>
               </div>
               <div class="detail">
                 <Icon name="logos:nodejs-icon" width="2rem" />
                 <Icon name="logos:typescript-icon" width="2rem" />
-                <Icon name="vscode-icons:file-type-mongo" width="3rem"/>
+                <Icon name="vscode-icons:file-type-mongo" width="3rem" />
                 <p class="detail-date">13-01-2023</p>
               </div>
             </div>
           </a>
           <a
             title="Tips for developers"
+            aria-label="link to project Blog Frontend developer,Guides and tips to start with JavaScript"
             target="_blank"
             href="https://n-ignacio-bouffanais.github.io/Blog-tips-for-developers/"
             rel="noreferrer"
@@ -207,11 +225,11 @@ import ecommerce from "../images/ecommerce.png";
             <div class="card-container">
               <figure class="project-image-container">
                 <img
-                src="/blog.JPG"
-                alt="Project image"
-                width={350}
-                height={150}
-              />
+                  src="/blog.JPG"
+                  alt="Project image"
+                  width={350}
+                  height={150}
+                />
               </figure>
               <div class="card-body">
                 <h3>Blog Frontend developer</h3>
@@ -229,6 +247,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="Dashboard with theme switcher"
+            aria-label="link to project Dashboard theme switcher, build with HTML, CSS GRID, CSS Flexbox y Javascript"
             target="_blank"
             href="https://n-ignacio-bouffanais.github.io/Social-media-dashboard/"
             rel="noreferrer"
@@ -259,6 +278,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="time-slots-app"
+            aria-label="link to project Time-slots-app, built with nextjs13"
             target="_blank"
             href="https://time-slots-app.vercel.app/"
             rel="noreferrer"
@@ -290,6 +310,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="easybank-landing-page"
+            aria-label="link to project Bank-Landing-page"
             target="_blank"
             href="https://easybank-landing-page-omega-blue.vercel.app/"
             rel="noreferrer"
@@ -320,6 +341,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="Interactive rating component"
+            aria-label="link to project Interactive rating component"
             target="_blank"
             href="https://n-ignacio-bouffanais.github.io/interactive-rating-component-main/"
             rel="noreferrer"
@@ -350,6 +372,7 @@ import ecommerce from "../images/ecommerce.png";
           </a>
           <a
             title="advice-generator"
+            aria-label="link to project Advice generator"
             target="_blank"
             href="https://n-ignacio-bouffanais.github.io/advice-generator-app/src/"
             rel="noreferrer"
@@ -477,7 +500,7 @@ import ecommerce from "../images/ecommerce.png";
     padding: 0 0 6rem;
     margin: 0 auto;
     background: #0e0e0e;
-    a{
+    a {
       text-decoration: none;
     }
     h2 {
@@ -549,7 +572,7 @@ import ecommerce from "../images/ecommerce.png";
       justify-content: space-between;
       align-items: center;
       height: 4rem;
-      p{
+      p {
         color: yellow;
       }
       .detail-date {
