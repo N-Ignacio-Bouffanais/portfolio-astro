@@ -1,6 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
+import { Image } from 'astro:assets';
+import home from "../images/home.png";
+import ecommerce from "../images/ecommerce.png";
 ---
 
 <Layout title="Nicolas Bouffanais">
@@ -36,7 +39,7 @@ import { Icon } from "astro-icon";
               <li>SASS</li>
             </ul>
           </div>
-          <div class="about-contact">
+          <div class="about-contact" >
             <div class="contact-container">
               <div class="linkedin card">
                 <a
@@ -88,24 +91,19 @@ import { Icon } from "astro-icon";
         <h2>Some things i've done</h2>
         <div class="projects-main">
           <a
-            title="Workout WebApp"
+            title="Educational WebApp"
             target="_blank"
-            href="https://routine-t3.vercel.app/"
+            href="https://github.com/N-Ignacio-Bouffanais/Rooms-NestJS"
             rel="noreferrer"
           >
           <div class="card-container">
-              <figure class="project-image-container">
-                <img
-                  src="/workout-app.JPG"
-                  alt="Workout WebApp image"
-                  width={350}
-                  height={150}
-                />
-              </figure>
+              <picture class="project-image-container">
+                <Image src={home} alt="Educational App image" width="350" height="150"/>
+              </picture>
               <div class="card-body">
-                <h3>Workout WebApp</h3>
+                <h3>Rooms App</h3>
                 <p>
-                  Workout WebApp with responsive design, a full stack application with T3 stack (Typescript, Nextjs, Tailwindcss and Prisma).
+                  Educational web app, responsive, build with NestJS, ReactJS and Prisma.
                 </p>
               </div>
               <div class="detail">
@@ -113,7 +111,31 @@ import { Icon } from "astro-icon";
                 <Icon name="logos:tailwindcss-icon" width="2rem" />
                 <Icon name="logos:typescript-icon" width="2rem" />
                 <Icon name="logos:react" width="2rem" />
-                <p class="detail-date">20-04-2023</p>
+                <p class="detail-date">03-12-2023</p>
+              </div>
+            </div>
+          </a>
+          <a
+            title="Ecommerce"
+            target="_blank"
+            href="https://github.com/N-Ignacio-Bouffanais/astro-ecommerce"
+            rel="noreferrer"
+          >
+          <div class="card-container">
+              <picture class="project-image-container">
+                <Image src={ecommerce} alt="Educational App image" width="350" height="150"/>
+              </picture>
+              <div class="card-body">
+                <h3>Ecommerce</h3>
+                <p>
+                  Ecommerce WebApp build with NestJS, ReactJS, PostgreSQL.
+                </p>
+              </div>
+              <div class="detail">
+                <Icon name="logos:tailwindcss-icon" width="2rem" />
+                <Icon name="logos:typescript-icon" width="2rem" />
+                <Icon name="logos:react" width="2rem" />
+                <p class="detail-date">03-12-2023</p>
               </div>
             </div>
           </a>
@@ -489,8 +511,7 @@ import { Icon } from "astro-icon";
       border-radius: 0.6rem 0.6rem 0 0;
       background-size: contain;
       width: 100%;
-      min-height: 15rem;
-      height: auto;
+      min-height: 17rem;
     }
     h3 {
       font-size: 1.4rem;
@@ -508,6 +529,7 @@ import { Icon } from "astro-icon";
     }
     .card-body {
       padding: 0.5rem 0.7rem;
+      height: 100%;
       h3 {
         display: flex;
         justify-content: start;
