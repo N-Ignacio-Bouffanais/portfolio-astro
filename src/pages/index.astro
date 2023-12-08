@@ -1,9 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon";
-import { Image } from "astro:assets";
-import home from "../images/home.png";
-import ecommerce from "../images/ecommerce.png";
 ---
 
 <Layout title="Nicolas Bouffanais">
@@ -101,8 +98,8 @@ import ecommerce from "../images/ecommerce.png";
           >
             <div class="card-container">
               <picture class="project-image-container">
-                <Image
-                  src={home}
+                <img
+                  src="/home.png"
                   alt="Educational App image"
                   width="350"
                   height="150"
@@ -133,8 +130,8 @@ import ecommerce from "../images/ecommerce.png";
           >
             <div class="card-container">
               <picture class="project-image-container">
-                <Image
-                  src={ecommerce}
+                <img
+                  src="/ecommerce.png"
                   alt="Educational App image"
                   width="350"
                   height="150"
